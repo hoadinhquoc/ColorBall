@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61591800116458150}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1673476016517570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.41, z: 0}
+  m_LocalPosition: {x: -1.26, y: 3.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4566531556772688}
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
-  StartPoint: {x: 2, y: 3.55, z: 0}
-  EndPoint: {x: 0, y: 2, z: 0}
+  StartPoint: {x: -1.2, y: 3.55, z: 0}
+  EndPoint: {x: 2.13, y: 1.59, z: 0}
 --- !u!212 &212384461159528816
 SpriteRenderer:
   m_ObjectHideFlags: 1
