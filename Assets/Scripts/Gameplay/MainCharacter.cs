@@ -9,16 +9,29 @@ public class MainCharacter : MonoBehaviour {
 	}
 
 	[SerializeField] float Speed = 10f;
+	[SerializeField] SpriteRenderer m_display;
+	GameSetting m_gameSetting;	
+	int m_colorIndex = 0;
 
 	Vector3 m_defaultPosition;
     Vector3 m_direction = Vector3.up;
 	State m_state = State.IDLE;
 	// Use this for initialization
+	
 	void Awake () {
 		m_defaultPosition = this.transform.position;
 
 		GameEvents.MC_CHANGE_DIRECTION += OnDirectionChange;
 		GameEvents.START_GAME += OnStartGame;
+	}
+	void OnGameSettingUpdate()
+	{
+		m_gameSetting = GameManager.Instance.Setting;
+	}
+	// Use this for initialization
+	void Start () {
+		OnGameSettingUpdate();
+		ChangeColor(0);
 	}
 	void OnDirectionChange()
     {
@@ -47,6 +60,46 @@ public class MainCharacter : MonoBehaviour {
 	public void OnChildTriggerEnter(Collider2D col)
 	{
 		Debug.Log("Trigger " + col.gameObject.name);
-		OnDirectionChange();
+
+		if(col.gameObject.CompareTag("Platform"))
+		{
+			Platform platform = col.gameObject.GetComponent<Platform>();
+
+			if(m_colorIndex == platform.ColorIndex)
+			{
+				OnDirectionChange();
+				GameEvents.INSCREASE_SCORE.Raise(5);
+			}
+			else
+			{
+				CollideWrongObject();
+			}
+			
+		}
+		
+		if(col.gameObject.CompareTag("Obstacle"))
+		{
+			CollideWrongObject();
+		}
+
+		if(col.gameObject.CompareTag("Node"))
+		{
+			Node node = col.gameObject.GetComponent<Node>();
+
+			ChangeColor(node.ColorIndex);
+			GameEvents.INSCREASE_SCORE.Raise(10);
+		}
 	}
+
+	void ChangeColor(int colorIndex)
+	{
+		m_display.color = m_gameSetting.GlobalColorList[colorIndex];
+	}
+
+	void CollideWrongObject()
+	{
+		m_state = State.IDLE;
+		GameEvents.GAME_OVER.Raise();
+	}
+
 }

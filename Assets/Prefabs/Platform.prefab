@@ -20,13 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4071635967386486}
   - component: {fileID: 61228785321669216}
+  - component: {fileID: 114351279735079268}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1568703178790332
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568703178790332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4572775783449664}
@@ -136,6 +137,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563b13c2d6a38484b982d4ac35399796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indentify: 0
+  ColorChangeTime: 5
+  m_display: {fileID: 212709764506201878}
+--- !u!114 &114351279735079268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257223885488448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb2a829b31582f438afc3f9eff8139c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: MyColliderEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!212 &212709764506201878
 SpriteRenderer:
   m_ObjectHideFlags: 1

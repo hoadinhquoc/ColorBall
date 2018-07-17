@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: DefaultSetting
   m_EditorClassIdentifier: 
   GlobalColorList:
-  - {r: 0, g: 1, b: 0.939451, a: 1}
-  - {r: 1, g: 0.7070738, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
   - {r: 0.94728756, g: 0, b: 1, a: 1}
   - {r: 0, g: 0.3755183, b: 0.9622642, a: 1}

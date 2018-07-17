@@ -36,6 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4282402520511848}
   - component: {fileID: 114641789466394286}
+  - component: {fileID: 58944870061522844}
   m_Layer: 0
   m_Name: Node
   m_TagString: Node
@@ -57,7 +58,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4196350985130158
 Transform:
   m_ObjectHideFlags: 1
@@ -99,6 +100,21 @@ Transform:
   m_Father: {fileID: 4282402520511848}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58944870061522844
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1478881388268300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!114 &114641789466394286
 MonoBehaviour:
   m_ObjectHideFlags: 1

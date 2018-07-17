@@ -8,23 +8,31 @@ public class GameManager : MonoBehaviour {
 	public GameSetting Setting{
 		get{return m_gameSetting;}
 	}
+
+	int m_score = 0;
+	public int Score{get{return m_score;}}
 	// Use this for initialization
 	void Awake () {
 		Instance = this;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void OnGameStart()
 	{
+		m_score = 0;
+		GameEvents.SCORE_CHANGED.Raise(m_score);
+
 		GameEvents.START_GAME.Raise();
 	}
 
 	void OnGameOver()
 	{
 
+	}
+
+	void OnInscreaseScore(int scorePlus)
+	{
+		m_score += scorePlus;
+
+		GameEvents.SCORE_CHANGED(m_score);
 	}
 }

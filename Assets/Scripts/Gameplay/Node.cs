@@ -8,6 +8,8 @@ public class Node : MonoBehaviour {
 	[SerializeField] SpriteRenderer m_display;
 	GameSetting m_gameSetting;
 	
+	int m_colorIndex = 0;
+	public int ColorIndex{get{return m_colorIndex;}}
 	void Awake()
 	{
 		GameEvents.UPDATE_GAME_SETTING += OnGameSettingUpdate;
@@ -37,6 +39,14 @@ public class Node : MonoBehaviour {
 	{
 		int randomIndex = Random.Range(0, m_gameSetting.GlobalColorList.Count);
 
+		m_colorIndex = randomIndex;
 		m_display.color = m_gameSetting.GlobalColorList[randomIndex];
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		Debug.Log("ColliderTrigger " + col.gameObject.name);
+		if(col.gameObject.CompareTag("MC"))
+			gameObject.SetActive(false);
 	}
 }
