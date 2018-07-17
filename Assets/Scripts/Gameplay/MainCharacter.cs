@@ -31,14 +31,16 @@ public class MainCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		OnGameSettingUpdate();
-		ChangeColor(0);
+
 	}
+
 	void OnDirectionChange()
     {
         m_direction.y *= -1;
     }
 	void OnStartGame()
 	{
+		Reset();
 		m_state = State.RUNNING;
 	}
 	// Update is called once per frame
@@ -56,6 +58,7 @@ public class MainCharacter : MonoBehaviour {
 	{
 		m_state = State.IDLE;
 		transform.position = m_defaultPosition;
+		ChangeColor(0);
 	}
 	public void OnChildTriggerEnter(Collider2D col)
 	{

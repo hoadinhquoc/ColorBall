@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		Instance = this;
+
+		GameEvents.INSCREASE_SCORE += OnInscreaseScore;
 	}
 
 	public void OnGameStart()
