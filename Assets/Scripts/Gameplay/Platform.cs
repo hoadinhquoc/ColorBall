@@ -6,7 +6,7 @@ public class Platform : MonoBehaviour {
 
 	public enum Indentify
 	{
-		TOP,
+		TOP = 0,
 		BOTTOM
 	}
 	[SerializeField] Indentify indentify;

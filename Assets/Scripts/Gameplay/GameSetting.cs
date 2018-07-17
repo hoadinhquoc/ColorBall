@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameSetting : ScriptableObject {
 
-	public List<Color> GlobalColorList; 
+	[SerializeField] public List<Color> GlobalColorList; 
+
 }

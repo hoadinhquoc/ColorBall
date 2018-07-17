@@ -6,6 +6,8 @@ public class PlatformsController : MonoBehaviour {
 
 	[SerializeField] Platform[] platforms;
 	[SerializeField] GameSetting m_gameSetting;
+
+	int numberOfColor = 2;
 	void Awake()
 	{
 		GameEvents.START_GAME += OnGameStart;
@@ -30,7 +32,7 @@ public class PlatformsController : MonoBehaviour {
 
 
 		List<int> colorIndexList = new List<int>();
-		for(int i = 0 ; i < m_gameSetting.GlobalColorList.Count; i++)
+		for(int i = 0 ; i < numberOfColor; i++)
 		{
 			if(i != collidedColorIndex)
 				colorIndexList.Add(i);
