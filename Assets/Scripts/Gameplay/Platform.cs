@@ -11,7 +11,6 @@ public class Platform : MonoBehaviour {
 	}
 	[SerializeField] Indentify indentify;
 	public Indentify PlatformIndentify{get{return indentify;}}
-	[SerializeField] float ColorChangeTime = 5f;
 	[SerializeField] SpriteRenderer m_display;
 	GameSetting m_gameSetting;
 	
