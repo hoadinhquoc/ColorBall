@@ -11,6 +11,7 @@ public class GameEvents {
 	public static Action<int> INSCREASE_SCORE;
 	public static Action<int> SCORE_CHANGED;
 	public static Action MC_CHANGE_DIRECTION;
+	public static Action<Platform.Indentify> MC_COLLIDED_PLATFORM;
 	
 	 
 }

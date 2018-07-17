@@ -72,6 +72,7 @@ public class MainCharacter : MonoBehaviour {
 			{
 				OnDirectionChange();
 				GameEvents.INSCREASE_SCORE.Raise(5);
+				GameEvents.MC_COLLIDED_PLATFORM.Raise(platform.PlatformIndentify);
 			}
 			else
 			{

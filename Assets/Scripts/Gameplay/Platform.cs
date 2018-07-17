@@ -10,6 +10,7 @@ public class Platform : MonoBehaviour {
 		BOTTOM
 	}
 	[SerializeField] Indentify indentify;
+	public Indentify PlatformIndentify{get{return indentify;}}
 	[SerializeField] float ColorChangeTime = 5f;
 	[SerializeField] SpriteRenderer m_display;
 	GameSetting m_gameSetting;
@@ -31,7 +32,7 @@ public class Platform : MonoBehaviour {
 		ChangeColor((int)indentify);
 	}
 
-	void ChangeColor(int colorIndex)
+	public void ChangeColor(int colorIndex)
 	{
 		m_colorIndex = colorIndex;
 		m_display.color = m_gameSetting.GlobalColorList[colorIndex];
