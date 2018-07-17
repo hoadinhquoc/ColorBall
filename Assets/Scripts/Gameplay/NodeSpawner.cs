@@ -29,7 +29,9 @@ public class NodeSpawner : MonoBehaviour {
 
 		if(childList.Count >= numberOfNode)
 		{
-			childList.RemoveRange(0, childList.Count - numberOfNode);
+			int totalRemovedNode = childList.Count - numberOfNode;
+			for(int i = 0; i < totalRemovedNode; i++)
+				OnNodeRemoved(childList[0]);
 		}
 	}
 

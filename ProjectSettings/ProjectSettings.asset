@@ -152,6 +152,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Standalone: com.JKStudio.ColorBall
+    iOS: com.ProtoTeam.ColorBall
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
