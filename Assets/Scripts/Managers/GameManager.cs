@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		Instance = this;
-
+		Application.targetFrameRate = 60;
 		GameEvents.INSCREASE_SCORE += OnInscreaseScore;
 	}
 
