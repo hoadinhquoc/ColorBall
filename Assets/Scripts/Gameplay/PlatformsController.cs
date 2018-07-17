@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformsController : MonoBehaviour {
 	public static PlatformsController Instance;
 	[SerializeField] Platform[] platforms;
-	[SerializeField] GameSetting m_gameSetting;
+	//[SerializeField] GameSetting m_gameSetting;
 	int[] m_platformColors;
 	public int[] PlatformColors{get{return m_platformColors;}}
 	int numberOfColor = 2;
@@ -21,7 +21,7 @@ public class PlatformsController : MonoBehaviour {
 
 	void OnGameStart()
 	{
-		m_gameSetting = GameManager.Instance.Setting;
+		//m_gameSetting = GameManager.Instance.Setting;
 
 		platforms[0].ChangeColor(0);
 		platforms[1].ChangeColor(1);

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PassingScore: 25
   NumberOfColor: 3
-  NumberOfObstacle: 2
+  NumberOfObstacle: 1
   ObstacleSpeed:
     MinValue: 1
     MaxValue: 3

@@ -34,6 +34,10 @@ public class NodeSpawner : MonoBehaviour {
 		
 		Node newNode = Instantiate(nodePrefab, this.transform).GetComponent<Node>();
 
+		Vector3 newPosition = newNode.transform.position;
+		newPosition.y = SpawnYRange.RandomValue;
+		newNode.transform.position = newPosition;
+
 		childList.Add(newNode);
 	}
 
