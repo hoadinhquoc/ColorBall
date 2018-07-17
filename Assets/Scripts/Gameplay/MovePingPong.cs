@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovePingPong : MonoBehaviour {
 
-	[SerializeField] float Speed = 2f;
+	[SerializeField] public float Speed = 2f;
 	[SerializeField] Vector3 StartPoint;
 	[SerializeField] Vector3 EndPoint;
 

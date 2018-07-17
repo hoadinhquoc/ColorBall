@@ -417,6 +417,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1673476016517570, guid: 3def8da46ee11ee479daa88fcd472cc3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3def8da46ee11ee479daa88fcd472cc3, type: 2}
   m_IsPrefabAsset: 0
@@ -759,6 +763,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8edbc196aa5b4e42986b4da8ac54e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 114433367856424566, guid: 3def8da46ee11ee479daa88fcd472cc3,
+    type: 2}
+  SpawnYRange:
+    MinValue: -6
+    MaxValue: 6
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0
@@ -838,6 +847,10 @@ Prefab:
     - target: {fileID: 4282402520511848, guid: 0ef3c47bdf5b84dcd9e20f410e65784e, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478881388268300, guid: 0ef3c47bdf5b84dcd9e20f410e65784e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ef3c47bdf5b84dcd9e20f410e65784e, type: 2}
@@ -1120,6 +1133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e1de383ee7c46feb7f36fb5a3bd026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StageList:
+  - {fileID: 11400000, guid: d770c460c50564897ac23b129e73e3ac, type: 2}
+  - {fileID: 11400000, guid: 0e4856229e0b84c43a2ebe7cbde8e217, type: 2}
+  - {fileID: 11400000, guid: 6e738b3bdf94c49bbb1189f468d8f9ac, type: 2}
 --- !u!1001 &1688233445
 Prefab:
   m_ObjectHideFlags: 0
@@ -1162,7 +1179,7 @@ Prefab:
     - target: {fileID: 114728348494941310, guid: 71610e2af99710b4484655805b00b0cc,
         type: 2}
       propertyPath: Speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71610e2af99710b4484655805b00b0cc, type: 2}

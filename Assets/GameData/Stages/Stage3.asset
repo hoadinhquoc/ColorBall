@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a28a60bb9234ea58fcc54fd2a64ed0, type: 3}
-  m_Name: Stage1
+  m_Name: Stage3
   m_EditorClassIdentifier: 
-  PassingScore: 10
-  NumberOfObstacle: 0
+  PassingScore: 25
+  NumberOfObstacle: 2
   ObstacleSpeed:
-    MinValue: 0
-    MaxValue: 5
-  NumberOfNode: 0
+    MinValue: 1
+    MaxValue: 3
+  NumberOfNode: 1

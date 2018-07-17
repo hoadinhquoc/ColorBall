@@ -7,6 +7,7 @@ public class GameEvents {
 	public static Action START_GAME;
 	public static Action GAME_OVER;
 	public static Action UPDATE_GAME_SETTING;
+	public static Action STAGE_CHANGED;
 
 	public static Action<int> INSCREASE_SCORE;
 	public static Action<int> SCORE_CHANGED;
