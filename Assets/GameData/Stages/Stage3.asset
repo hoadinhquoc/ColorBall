@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: Stage3
   m_EditorClassIdentifier: 
   PassingScore: 25
+  NumberOfColor: 4
   NumberOfObstacle: 2
   ObstacleSpeed:
     MinValue: 1
     MaxValue: 3
-  NumberOfNode: 1
+  NumberOfNode: 3

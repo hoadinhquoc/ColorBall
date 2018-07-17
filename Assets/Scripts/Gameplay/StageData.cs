@@ -20,6 +20,7 @@ public class MinMaxFloat
 public class StageData : ScriptableObject {
 
 	public int PassingScore = 25;
+	public int NumberOfColor = 2;
 
 	[Header("Obstacle")]
 	public int NumberOfObstacle = 0;

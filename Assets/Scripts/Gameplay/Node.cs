@@ -8,13 +8,17 @@ public class Node : MonoBehaviour {
 	[SerializeField] SpriteRenderer m_display;
 	GameSetting m_gameSetting;
 	
+	int[] m_plaformColor;
 	int m_colorIndex = 0;
 	public int ColorIndex{get{return m_colorIndex;}}
 	void Awake()
 	{
 		GameEvents.UPDATE_GAME_SETTING += OnGameSettingUpdate;
 	}
-
+	void OnDestroy()
+	{
+		GameEvents.UPDATE_GAME_SETTING -= OnGameSettingUpdate;
+	}
 	void OnGameSettingUpdate()
 	{
 		m_gameSetting = GameManager.Instance.Setting;
@@ -35,18 +39,24 @@ public class Node : MonoBehaviour {
 		CancelInvoke();
 	}
 
+	void OnPlatformColorChanged(int topColorInde, int botColorIndex)
+	{
+
+	}
 	void ChangeColor()
 	{
-		int randomIndex = Random.Range(0, m_gameSetting.GlobalColorList.Count);
+		int randomIndex = Random.Range(0, 1);
 
-		m_colorIndex = randomIndex;
-		m_display.color = m_gameSetting.GlobalColorList[randomIndex];
+		m_colorIndex = PlatformsController.Instance.PlatformColors[randomIndex];
+		m_display.color = m_gameSetting.GlobalColorList[m_colorIndex];
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		Debug.Log("ColliderTrigger " + col.gameObject.name);
 		if(col.gameObject.CompareTag("MC"))
-			gameObject.SetActive(false);
+		{
+			NodeSpawner.Instance.OnNodeRemoved(this);
+		}
 	}
 }

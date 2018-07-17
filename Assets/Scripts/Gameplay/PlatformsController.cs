@@ -3,20 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformsController : MonoBehaviour {
-
+	public static PlatformsController Instance;
 	[SerializeField] Platform[] platforms;
 	[SerializeField] GameSetting m_gameSetting;
-
+	int[] m_platformColors;
+	public int[] PlatformColors{get{return m_platformColors;}}
 	int numberOfColor = 2;
 	void Awake()
 	{
+		Instance = this;
+		m_platformColors = new int[2];
+
 		GameEvents.START_GAME += OnGameStart;
 		GameEvents.MC_COLLIDED_PLATFORM += OnMCCollidePlatform;
+		GameEvents.STAGE_CHANGED += OnStageChanged;
 	}
 
 	void OnGameStart()
 	{
 		m_gameSetting = GameManager.Instance.Setting;
+
+		platforms[0].ChangeColor(0);
+		platforms[1].ChangeColor(1);
+
+		m_platformColors[0] = 0;
+		m_platformColors[1] = 1;
+	}
+
+	void OnStageChanged()
+	{
+		numberOfColor = StageManager.Instance.CurrentStage.NumberOfColor;
 	}
 
 	void OnMCCollidePlatform(Platform.Indentify indentify)
@@ -47,5 +63,10 @@ public class PlatformsController : MonoBehaviour {
 
 		randomIndex = Random.Range(0,colorIndexList.Count);
 		anotherPlatform.ChangeColor(colorIndexList[randomIndex]);
+
+		m_platformColors[0] = platforms[0].ColorIndex;
+		m_platformColors[1] = platforms[1].ColorIndex;
 	}
+
+	
 }
