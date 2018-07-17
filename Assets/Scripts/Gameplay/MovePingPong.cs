@@ -25,8 +25,4 @@ public class MovePingPong : MonoBehaviour {
         Gizmos.DrawLine(StartPoint, EndPoint);
     }
 
-    private void OnGUI()
-    {
-        Debug.Log("OnGUI");
-    }
 }
