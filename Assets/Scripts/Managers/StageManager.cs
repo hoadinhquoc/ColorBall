@@ -19,12 +19,13 @@ public class StageManager : MonoBehaviour {
 	}
 	
 	void OnScoreInscrease (int currentScore) {
-		if(currentScore >= m_targetScoreToChangeStage)
+		if(currentScore >= m_targetScoreToChangeStage && currentScore > 0)
 			ChangeStage(++m_currentStageIndex);
 	}
 
 	void OnGameStart()
 	{	
+		m_currentStageIndex = 0;
 		ChangeStage(0);
 	}
 	void ChangeStage(int stageIndex)
