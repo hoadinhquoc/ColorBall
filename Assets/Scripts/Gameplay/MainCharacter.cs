@@ -93,6 +93,7 @@ public class MainCharacter : MonoBehaviour {
 
 	void ChangeColor(int colorIndex)
 	{
+		m_colorIndex = colorIndex;
 		m_display.color = m_gameSetting.GlobalColorList[colorIndex];
 	}
 

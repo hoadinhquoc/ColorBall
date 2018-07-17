@@ -159,11 +159,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
   m_IsPrefabAsset: 0
---- !u!212 &284922934 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212709764506201878, guid: 3525eec58e73ef042a22085d8bf9a1a6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1383102166}
 --- !u!224 &423590901 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224906380727737216, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
@@ -343,6 +338,10 @@ Prefab:
         type: 2}
       propertyPath: EndPoint.x
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351965560960634, guid: 3def8da46ee11ee479daa88fcd472cc3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3def8da46ee11ee479daa88fcd472cc3, type: 2}
@@ -532,13 +531,46 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1705005448497850, guid: dd41bc5ecbe7b49d29273e6e34526ac2, type: 2}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 224471867523816798, guid: dd41bc5ecbe7b49d29273e6e34526ac2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00012207031
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd41bc5ecbe7b49d29273e6e34526ac2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1137071411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1921833068326204, guid: dd41bc5ecbe7b49d29273e6e34526ac2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1137071410}
+--- !u!114 &1137071412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137071411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95ff0c17c5d2423998dbdc0432368be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1232379598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1639750859487510, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+    type: 2}
+  m_PrefabInternal: {fileID: 1594828409}
+--- !u!114 &1232379599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232379598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95ff0c17c5d2423998dbdc0432368be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1383102166
 Prefab:
   m_ObjectHideFlags: 0
@@ -584,22 +616,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114072636119389930, guid: 3525eec58e73ef042a22085d8bf9a1a6,
         type: 2}
-      propertyPath: m_display
-      value: 
-      objectReference: {fileID: 284922934}
-    - target: {fileID: 114072636119389930, guid: 3525eec58e73ef042a22085d8bf9a1a6,
-        type: 2}
       propertyPath: indentify
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1409184743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673476016517570, guid: 3def8da46ee11ee479daa88fcd472cc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 847235877}
 --- !u!4 &1409184745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4955426030139922, guid: 3def8da46ee11ee479daa88fcd472cc3,
     type: 2}
   m_PrefabInternal: {fileID: 847235877}
+--- !u!61 &1409184746
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1409184743}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!4 &1410222851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4359159165137374, guid: 71610e2af99710b4484655805b00b0cc,
