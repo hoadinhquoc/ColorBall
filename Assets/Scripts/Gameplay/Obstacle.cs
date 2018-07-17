@@ -8,8 +8,14 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		moveComponent = GetComponent<MovePingPong>();
+
 	}
 	
+	public void SetPositionY(float y)
+	{
+		moveComponent.StartPoint.y = y;
+		moveComponent.EndPoint.y = y;
+	}
 	public void SetSpeed(float speed)
 	{
 		moveComponent.Speed = speed;

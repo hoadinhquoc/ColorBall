@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovePingPong : MonoBehaviour {
 
 	[SerializeField] public float Speed = 2f;
-	[SerializeField] Vector3 StartPoint;
-	[SerializeField] Vector3 EndPoint;
+	[SerializeField] public Vector3 StartPoint;
+	[SerializeField] public Vector3 EndPoint;
 
 	float timer = 0f;
 	// Update is called once per frame

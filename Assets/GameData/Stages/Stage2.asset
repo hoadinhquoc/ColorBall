@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Stage2
   m_EditorClassIdentifier: 
   PassingScore: 25
-  NumberOfObstacle: 1
+  NumberOfObstacle: 2
   ObstacleSpeed:
     MinValue: 1
     MaxValue: 3

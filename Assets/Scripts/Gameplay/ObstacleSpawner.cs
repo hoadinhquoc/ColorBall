@@ -41,11 +41,8 @@ public class ObstacleSpawner : MonoBehaviour {
 		{
 			Obstacle ob = childList[i];
 
-			Vector3 newPosition = ob.transform.position;
-			newPosition.y = SpawnYRange.RandomValue;
-			ob.transform.position = newPosition;
-
 			ob.SetSpeed(stageData.ObstacleSpeed.RandomValue);
+			ob.SetPositionY(SpawnYRange.RandomValue);
 		}
 	}
 }
