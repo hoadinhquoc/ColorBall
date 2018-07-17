@@ -28,7 +28,7 @@ public class ObstacleSpawner : MonoBehaviour {
 		}
 		else if (childList.Count > stageData.NumberOfObstacle)
 		{
-			int totalRemovedOb = stageData.NumberOfObstacle - childList.Count;
+			int totalRemovedOb = childList.Count - stageData.NumberOfObstacle;
 			for(int i = 0 ; i < totalRemovedOb ; i ++)
 			{
 				GameObject killedChild = childList[0].gameObject;
