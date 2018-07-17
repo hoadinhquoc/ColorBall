@@ -26,6 +26,11 @@ public class NodeSpawner : MonoBehaviour {
 		StageData stageData = StageManager.Instance.CurrentStage;
 		
 		numberOfNode = stageData.NumberOfNode;
+
+		if(childList.Count >= numberOfNode)
+		{
+			childList.RemoveRange(0, childList.Count - numberOfNode);
+		}
 	}
 
 	void SpawnNode()

@@ -11,6 +11,22 @@ public class Obstacle : MonoBehaviour {
 
 	}
 	
+	void OnEnable()
+	{
+		moveComponent.enabled = true;
+		moveComponent.ResetTimer();
+
+		GameEvents.GAME_OVER += OnGameOver;
+	}
+
+	void OnDisable()
+	{
+		GameEvents.GAME_OVER -= OnGameOver;
+	}
+	void OnGameOver()
+	{
+		moveComponent.enabled = false;
+	}
 	public void SetPositionY(float y)
 	{
 		moveComponent.StartPoint.y = y;

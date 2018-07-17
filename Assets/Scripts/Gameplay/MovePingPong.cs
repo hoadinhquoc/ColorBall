@@ -19,6 +19,10 @@ public class MovePingPong : MonoBehaviour {
         transform.position = Vector3.Lerp(StartPoint, EndPoint, t);
     }
 
+    public void ResetTimer()
+    {
+        timer = 0f;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
