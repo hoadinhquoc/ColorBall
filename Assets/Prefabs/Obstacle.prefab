@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ddd063f9f503e949a175bd2fa8e52bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
-  StartPoint: {x: -4, y: 3.55, z: 0}
-  EndPoint: {x: 4, y: 1.59, z: 0}
+  Speed: 7
+  StartPoint: {x: -7, y: 3.55, z: 0}
+  EndPoint: {x: 7, y: 1.59, z: 0}
 --- !u!212 &212384461159528816
 SpriteRenderer:
   m_ObjectHideFlags: 1

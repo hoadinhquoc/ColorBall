@@ -200,7 +200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4543250696960840, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 7.76
       objectReference: {fileID: 0}
     - target: {fileID: 4543250696960840, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -588,7 +588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4543250696960840, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -7.76
       objectReference: {fileID: 0}
     - target: {fileID: 4543250696960840, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -622,6 +622,10 @@ Prefab:
         type: 2}
       propertyPath: indentify
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543250696960840, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.90005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3525eec58e73ef042a22085d8bf9a1a6, type: 2}
@@ -661,8 +665,8 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 114433367856424566, guid: 3def8da46ee11ee479daa88fcd472cc3,
     type: 2}
   SpawnYRange:
-    MinValue: -4
-    MaxValue: 4
+    MinValue: -3
+    MaxValue: 3
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +675,7 @@ Transform:
   m_GameObject: {fileID: 1419209400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -719,9 +723,9 @@ MonoBehaviour:
   nodePrefab: {fileID: 114641789466394286, guid: 0ef3c47bdf5b84dcd9e20f410e65784e,
     type: 2}
   SpawnYRange:
-    MinValue: -4
-    MaxValue: 4
-  timeToSpawn: 1
+    MinValue: -2
+    MaxValue: 2
+  timeToSpawn: 5
 --- !u!1001 &1594828409
 Prefab:
   m_ObjectHideFlags: 0
@@ -1037,6 +1041,11 @@ Prefab:
     - target: {fileID: 4359159165137374, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114728348494941310, guid: 71610e2af99710b4484655805b00b0cc,
+        type: 2}
+      propertyPath: Speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
