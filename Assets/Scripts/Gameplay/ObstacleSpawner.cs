@@ -43,6 +43,7 @@ public class ObstacleSpawner : MonoBehaviour {
 
 			ob.SetSpeed(stageData.ObstacleSpeed.RandomValue);
 			ob.SetPositionY(SpawnYRange.RandomValue);
+			ob.Run();
 		}
 	}
 }

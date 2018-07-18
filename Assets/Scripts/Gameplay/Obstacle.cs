@@ -36,4 +36,9 @@ public class Obstacle : MonoBehaviour {
 	{
 		moveComponent.Speed = speed;
 	}
+
+	public void Run()
+	{
+		moveComponent.enabled = true;
+	}
 }
