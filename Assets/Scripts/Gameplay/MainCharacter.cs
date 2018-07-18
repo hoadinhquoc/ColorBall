@@ -91,7 +91,7 @@ public class MainCharacter : MonoBehaviour {
 			Node node = col.gameObject.GetComponent<Node>();
 
 			ChangeColor(node.ColorIndex);
-			GameEvents.INSCREASE_SCORE.Raise(10);
+			//GameEvents.INSCREASE_SCORE.Raise(10);
 		}
 	}
 
