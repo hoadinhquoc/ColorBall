@@ -661,8 +661,8 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 114433367856424566, guid: 3def8da46ee11ee479daa88fcd472cc3,
     type: 2}
   SpawnYRange:
-    MinValue: -6
-    MaxValue: 6
+    MinValue: -4
+    MaxValue: 4
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0
@@ -719,8 +719,8 @@ MonoBehaviour:
   nodePrefab: {fileID: 114641789466394286, guid: 0ef3c47bdf5b84dcd9e20f410e65784e,
     type: 2}
   SpawnYRange:
-    MinValue: -6
-    MaxValue: 6
+    MinValue: -4
+    MaxValue: 4
   timeToSpawn: 1
 --- !u!1001 &1594828409
 Prefab:
