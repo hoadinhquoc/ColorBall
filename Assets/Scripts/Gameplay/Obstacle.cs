@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour {
 
-	MovePingPong moveComponent;
+	MoveToPoint moveComponent;
 	// Use this for initialization
 	void Awake () {
-		moveComponent = GetComponent<MovePingPong>();
+		moveComponent = GetComponent<MoveToPoint>();
 
 	}
 	
@@ -40,5 +40,6 @@ public class Obstacle : MonoBehaviour {
 	public void Run()
 	{
 		moveComponent.enabled = true;
+		moveComponent.SetEndCallback(()=>{ObstacleSpawner.Instance.OnChildRemoved(this);});
 	}
 }

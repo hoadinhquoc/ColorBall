@@ -51,8 +51,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4955426030139922}
-  - component: {fileID: 114512633627481826}
   - component: {fileID: 114433367856424566}
+  - component: {fileID: 114953065729733116}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cc7601f60a940dda4f5b97f752a20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114512633627481826
+--- !u!114 &114953065729733116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,12 +145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1673476016517570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ddd063f9f503e949a175bd2fa8e52bc, type: 3}
+  m_Script: {fileID: 11500000, guid: b603282c357953e4da03a5cf191e5736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7
-  StartPoint: {x: -7, y: 3.55, z: 0}
-  EndPoint: {x: 7, y: 1.59, z: 0}
+  StartPoint: {x: -7, y: 0, z: 0}
+  EndPoint: {x: 7, y: 0, z: 0}
 --- !u!212 &212384461159528816
 SpriteRenderer:
   m_ObjectHideFlags: 1
