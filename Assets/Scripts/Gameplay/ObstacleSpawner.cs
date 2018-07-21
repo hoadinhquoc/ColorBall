@@ -33,6 +33,12 @@ public class ObstacleSpawner : MonoBehaviour {
 	void OnGameOver()
 	{
 		CancelInvoke("SpawnChild");
+		for(int i = 0; i < childList.Count;i++)
+		{
+			Destroy(childList[i].gameObject);
+		}
+
+		childList.Clear();
 	}
 
 	void SpawnChild()

@@ -8,7 +8,7 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		moveComponent = GetComponent<MoveToPoint>();
-
+		gameObject.SetActive(false);
 	}
 	
 	void OnEnable()
@@ -41,5 +41,6 @@ public class Obstacle : MonoBehaviour {
 	{
 		moveComponent.enabled = true;
 		moveComponent.SetEndCallback(()=>{ObstacleSpawner.Instance.OnChildRemoved(this);});
+		gameObject.SetActive(true);
 	}
 }
