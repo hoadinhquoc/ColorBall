@@ -649,9 +649,9 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 114433367856424566, guid: 3def8da46ee11ee479daa88fcd472cc3,
     type: 2}
   SpawnYRange:
-    MinValue: -3
-    MaxValue: 3
-  timeToSpawn: 3
+    MinValue: -4
+    MaxValue: 4
+  timeToSpawn: 3.5
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0
@@ -708,8 +708,8 @@ MonoBehaviour:
   nodePrefab: {fileID: 114641789466394286, guid: 0ef3c47bdf5b84dcd9e20f410e65784e,
     type: 2}
   SpawnYRange:
-    MinValue: -2
-    MaxValue: 2
+    MinValue: -2.5
+    MaxValue: 2.5
   timeToSpawn: 5
 --- !u!1001 &1594828409
 Prefab:
@@ -954,6 +954,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d770c460c50564897ac23b129e73e3ac, type: 2}
   - {fileID: 11400000, guid: 0e4856229e0b84c43a2ebe7cbde8e217, type: 2}
   - {fileID: 11400000, guid: 6e738b3bdf94c49bbb1189f468d8f9ac, type: 2}
+  - {fileID: 11400000, guid: ea74c503954d82d43a14711efbc17f6e, type: 2}
 --- !u!1001 &1688233445
 Prefab:
   m_ObjectHideFlags: 0
