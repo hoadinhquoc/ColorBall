@@ -39,6 +39,12 @@ public class Obstacle : MonoBehaviour {
 
 	public void Run()
 	{
+		if(Time.frameCount%2 == 0)
+		{
+			Vector3 temp = moveComponent.StartPoint;
+			moveComponent.StartPoint = moveComponent.EndPoint;
+			moveComponent.EndPoint = temp;
+		}
 		moveComponent.enabled = true;
 		moveComponent.SetEndCallback(()=>{ObstacleSpawner.Instance.OnChildRemoved(this);});
 		gameObject.SetActive(true);
