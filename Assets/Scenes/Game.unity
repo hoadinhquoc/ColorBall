@@ -651,7 +651,7 @@ MonoBehaviour:
   SpawnYRange:
     MinValue: -4
     MaxValue: 4
-  timeToSpawn: 3.5
+  timeToSpawn: 1
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0
