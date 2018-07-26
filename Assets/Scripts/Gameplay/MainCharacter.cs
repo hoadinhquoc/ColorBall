@@ -7,9 +7,17 @@ public class MainCharacter : MonoBehaviour {
 		IDLE,
 		RUNNING
 	}
-
+	enum MyGameObject
+	{
+		Platform = 0,
+		Obstacle = 1,
+		Node = 2,
+		Count
+	}
 	[SerializeField] float Speed = 10f;
 	[SerializeField] SpriteRenderer m_display;
+	[SerializeField] List<AudioClip> sfxList;
+	[SerializeField] AudioSource speaker;
 	GameSetting m_gameSetting;	
 	int m_colorIndex = 0;
 
@@ -79,11 +87,13 @@ public class MainCharacter : MonoBehaviour {
 				CollideWrongObject();
 			}
 			
+			PlaySFX(sfxList[(int)MyGameObject.Platform]);
 		}
 		
 		if(col.gameObject.CompareTag("Obstacle"))
 		{
 			CollideWrongObject();
+			PlaySFX(sfxList[(int)MyGameObject.Obstacle]);
 		}
 
 		if(col.gameObject.CompareTag("Node"))
@@ -91,6 +101,7 @@ public class MainCharacter : MonoBehaviour {
 			Node node = col.gameObject.GetComponent<Node>();
 
 			ChangeColor(node.ColorIndex);
+			PlaySFX(sfxList[(int)MyGameObject.Node]);
 			//GameEvents.INSCREASE_SCORE.Raise(10);
 		}
 	}
@@ -107,4 +118,9 @@ public class MainCharacter : MonoBehaviour {
 		GameEvents.GAME_OVER.Raise();
 	}
 
+	void PlaySFX(AudioClip clip)
+	{
+		speaker.clip = clip;
+		speaker.Play();
+	}
 }
