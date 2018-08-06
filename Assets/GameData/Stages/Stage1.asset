@@ -15,6 +15,6 @@ MonoBehaviour:
   NumberOfColor: 2
   NumberOfObstacle: 0
   ObstacleSpeed:
-    MinValue: 7
-    MaxValue: 8
+    MinValue: 4
+    MaxValue: 4
   NumberOfNode: 0

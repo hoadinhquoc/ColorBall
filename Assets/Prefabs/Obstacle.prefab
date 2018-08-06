@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7
-  StartPoint: {x: -7, y: 0, z: 0}
-  EndPoint: {x: 7, y: 0, z: 0}
+  StartPoint: {x: -6, y: 0, z: 0}
+  EndPoint: {x: 6, y: 0, z: 0}
 --- !u!212 &212384461159528816
 SpriteRenderer:
   m_ObjectHideFlags: 1
