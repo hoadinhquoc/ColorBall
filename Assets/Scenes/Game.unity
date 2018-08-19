@@ -640,21 +640,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114749617204170530, guid: b7167b0f3806c40a78c8c103da4b4ab9,
-        type: 2}
-      propertyPath: EventType.StartValue
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114749617204170530, guid: b7167b0f3806c40a78c8c103da4b4ab9,
-        type: 2}
-      propertyPath: EventType.RepeatValue
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114749617204170530, guid: b7167b0f3806c40a78c8c103da4b4ab9,
-        type: 2}
-      propertyPath: EventType.Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
   m_IsPrefabAsset: 0

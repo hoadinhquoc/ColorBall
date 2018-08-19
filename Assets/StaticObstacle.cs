@@ -10,6 +10,7 @@ public class StaticObstacle : MonoBehaviour {
 		STAND,
 		MOVING_OUT
 	}
+	[SerializeField] EventTrigger EventType;
 	[SerializeField] Transform TopLaser;
 	[SerializeField] GameObject TopCollider;
 	[SerializeField] Transform BottomLaser;
@@ -22,22 +23,44 @@ public class StaticObstacle : MonoBehaviour {
 	State m_state = State.HIDE;
 	float m_IndicatorTimer = 0f;
 	float m_StandTimer = 0f;
+
+	float m_TimeTriggerTimer = 0f;
+    int m_ScoreTrigger = 0;
 	
 	// Use this for initialization
 	void Awake()
 	{
 		GameEvents.RUN_STATIC_OBSTACLE += Run;
 		GameEvents.GAME_OVER += Reset;
+		GameEvents.SCORE_CHANGED += OnScoreChanged;
 		Reset();
 	}
 	void Reset()
 	{
+		Hide();
+
+		m_TimeTriggerTimer = 0f;
+        m_ScoreTrigger = (int)EventType.StartValue;
+	}
+	void Hide()
+    {
 		TopLaser.gameObject.SetActive(false);
 		BottomLaser.gameObject.SetActive(false);
 		m_state = State.HIDE;
 		m_StandTimer = 0f;
 		m_IndicatorTimer = 0f;
 	}
+	void OnScoreChanged(int score)
+    {
+        if (EventType.Type == EventTriggerType.SCORE)
+        {
+            if (score >= m_ScoreTrigger)
+            {
+                Run();
+                m_ScoreTrigger += (int)EventType.RepeatValue;
+            }
+        }
+    }
 	void Run()
 	{
 		m_state = State.SHOW_INDICATOR;
@@ -76,7 +99,7 @@ public class StaticObstacle : MonoBehaviour {
 
 			if(topLaserPos.y > TopStartPositionY)
 			{
-				Reset();
+				Hide();
 				GameEvents.END_STATIC_OBSTACLE.Raise();
 			}
 		}
@@ -99,4 +122,22 @@ public class StaticObstacle : MonoBehaviour {
 		
 
 	}
+
+	void LateUpdate()
+    {
+        if (EventType.Type == EventTriggerType.TIME && m_state == State.HIDE)
+        {
+            m_TimeTriggerTimer += Time.deltaTime;
+
+            if (GameManager.Instance.SingleRunTime > EventType.StartValue)
+            {
+                if(m_TimeTriggerTimer > EventType.RepeatValue)
+                {
+                    m_TimeTriggerTimer = 0f;
+                    Run();
+                }
+            }
+
+        }
+    }
 }

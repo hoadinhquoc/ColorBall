@@ -341,6 +341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b65e3d656334f91867e6d8357104e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EventType:
+    Type: 1
+    StartValue: 5
+    RepeatValue: 10
   TopLaser: {fileID: 4447003615539618}
   TopCollider: {fileID: 1383997038707264}
   BottomLaser: {fileID: 4157127859286238}
