@@ -81,7 +81,7 @@ public class MainCharacter : MonoBehaviour {
 			if(m_colorIndex == platform.ColorIndex)
 			{
 				OnDirectionChange();
-				GameEvents.INSCREASE_SCORE.Raise(5);
+				GameEvents.INSCREASE_SCORE.Raise(1);
 				GameEvents.MC_COLLIDED_PLATFORM.Raise(platform.PlatformIndentify);
 			}
 			else
@@ -104,7 +104,6 @@ public class MainCharacter : MonoBehaviour {
 
 			ChangeColor(node.ColorIndex);
 			PlaySFX(sfxList[(int)MyGameObject.Node]);
-			//GameEvents.INSCREASE_SCORE.Raise(10);
 		}
 	}
 
