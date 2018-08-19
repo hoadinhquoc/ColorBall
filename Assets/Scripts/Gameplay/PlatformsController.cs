@@ -23,11 +23,11 @@ public class PlatformsController : MonoBehaviour {
 	{
 		//m_gameSetting = GameManager.Instance.Setting;
 
-		platforms[0].ChangeColor(0);
-		platforms[1].ChangeColor(1);
+		platforms[0].ChangeColor(1);
+		platforms[1].ChangeColor(0);
 
-		m_platformColors[0] = 0;
-		m_platformColors[1] = 1;
+		m_platformColors[0] = 1;
+		m_platformColors[1] = 0;
 	}
 
 	void OnStageChanged()
