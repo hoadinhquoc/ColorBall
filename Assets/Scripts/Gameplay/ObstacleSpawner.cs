@@ -20,6 +20,9 @@ public class ObstacleSpawner : MonoBehaviour
         GameEvents.START_GAME += OnGameStart;
         GameEvents.GAME_OVER += OnGameOver;
         GameEvents.STAGE_CHANGED += OnStageChanged;
+
+        GameEvents.RUN_STATIC_OBSTACLE += StopSpawn;
+        GameEvents.END_STATIC_OBSTACLE += StartSpawn;
     }
 
     // Update is called once per frame
@@ -28,9 +31,18 @@ public class ObstacleSpawner : MonoBehaviour
         stageData = StageManager.Instance.CurrentStage;
         numberOfObstacle = stageData.NumberOfObstacle;
     }
-
+    void StopSpawn()
+    {
+        CancelInvoke("SpawnChild");
+    }
+    void StartSpawn()
+    {
+        CancelInvoke("SpawnChild");
+        InvokeRepeating("SpawnChild", 0, timeToSpawn);
+    }
     void OnGameStart()
     {
+        CancelInvoke("SpawnChild");
         InvokeRepeating("SpawnChild", 0, timeToSpawn);
     }
     void OnGameOver()
@@ -48,7 +60,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         if (childList.Count < numberOfObstacle)
         {
-            int totalMissingOb = numberOfObstacle - childList.Count;
+            //int totalMissingOb = numberOfObstacle - childList.Count;
 
             Obstacle ob = Instantiate(obstaclePrefab.gameObject, transform).GetComponent<Obstacle>();
 

@@ -16,6 +16,8 @@ public class GameEvents {
 	public static Action<Vector3> MC_CHANGED_POSITION;
 
 	public static Action RUN_SMART_OBSTACLE;
+	public static Action RUN_STATIC_OBSTACLE;
+	public static Action END_STATIC_OBSTACLE;
 	
 }
 

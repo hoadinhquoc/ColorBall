@@ -20,7 +20,6 @@ public class SmartObstacle : MonoBehaviour
     State m_state = State.HIDE;
     float m_timer = 0f;
     bool m_IsRightToLeft = true;
-    bool m_isFired = false;
 
     // Use this for initialization
     void Awake()
