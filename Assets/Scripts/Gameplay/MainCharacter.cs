@@ -91,8 +91,15 @@ public class MainCharacter : MonoBehaviour {
 			
 			PlaySFX(sfxList[(int)MyGameObject.Platform]);
 		}
-		
-		if(col.gameObject.CompareTag("Obstacle"))
+
+        if (col.gameObject.CompareTag("Perfect"))
+        {
+           
+            GameEvents.INSCREASE_SCORE.Raise(2);
+            
+        }
+
+        if (col.gameObject.CompareTag("Obstacle"))
 		{
 			CollideWrongObject();
 			PlaySFX(sfxList[(int)MyGameObject.Obstacle]);
@@ -111,7 +118,9 @@ public class MainCharacter : MonoBehaviour {
 	{
 		m_colorIndex = colorIndex;
 		m_display.color = m_gameSetting.GlobalColorList[colorIndex];
-	}
+        GameEvents.MC_CHANGED_COLOR.Raise(m_gameSetting.GlobalColorList[colorIndex]);
+
+    }
 
 	void CollideWrongObject()
 	{

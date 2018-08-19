@@ -12,7 +12,8 @@ public class GameEvents {
 	public static Action<int> INSCREASE_SCORE;
 	public static Action<int> SCORE_CHANGED;
 	public static Action MC_CHANGE_DIRECTION;
-	public static Action<Platform.Indentify> MC_COLLIDED_PLATFORM;
+    public static Action<Color> MC_CHANGED_COLOR;
+    public static Action<Platform.Indentify> MC_COLLIDED_PLATFORM;
 	public static Action<Vector3> MC_CHANGED_POSITION;
 
 	public static Action RUN_SMART_OBSTACLE;

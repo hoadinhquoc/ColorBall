@@ -8,6 +8,7 @@ TagManager:
   - MC
   - Obstacle
   - Node
+  - Perfect
   layers:
   - Default
   - TransparentFX
