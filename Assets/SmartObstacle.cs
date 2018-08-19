@@ -1,7 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum EventTriggerType
+{
+    SCORE,
+    TIME
+}
+[System.Serializable]
+public struct EventTrigger
+{
+    public EventTriggerType Type;
+    public float StartValue;
+    public float RepeatValue;
+}
 public class SmartObstacle : MonoBehaviour
 {
     enum State
@@ -10,6 +21,7 @@ public class SmartObstacle : MonoBehaviour
         SHOW_INDICATOR,
         FIRE
     }
+    [SerializeField] EventTrigger EventType;
     [SerializeField] GameObject IndicatorContainer;
     [SerializeField] GameObject LeftIndicator;
     [SerializeField] GameObject RightIndicator;
@@ -19,6 +31,8 @@ public class SmartObstacle : MonoBehaviour
     [SerializeField] float DefaultXPosition = 4f;
     State m_state = State.HIDE;
     float m_timer = 0f;
+    float m_TimeTriggerTimer = 0f;
+    int m_ScoreTrigger = 0;
     bool m_IsRightToLeft = true;
 
     // Use this for initialization
@@ -27,6 +41,7 @@ public class SmartObstacle : MonoBehaviour
         GameEvents.MC_CHANGED_POSITION += OnMCChangedPosition;
         GameEvents.START_GAME += OnGameStart;
         GameEvents.GAME_OVER += Reset;
+        GameEvents.SCORE_CHANGED += OnScoreChanged;
 
         GameEvents.RUN_SMART_OBSTACLE += Run;
     }
@@ -35,26 +50,59 @@ public class SmartObstacle : MonoBehaviour
         IndicatorContainer.SetActive(false);
         RealObstacle.SetActive(false);
     }
+    void OnScoreChanged(int score)
+    {
+        if (EventType.Type == EventTriggerType.SCORE)
+        {
+            if (score >= m_ScoreTrigger)
+            {
+                Run();
+                m_ScoreTrigger += (int)EventType.RepeatValue;
+            }
+        }
+    }
     void Reset()
     {
-        m_state = State.HIDE;
-		IndicatorContainer.SetActive(false);
-		RealObstacle.SetActive(false);
-		m_timer = 0f;
-    }
+        Hide();
 
+        m_TimeTriggerTimer = 0f;
+        m_ScoreTrigger = (int)EventType.StartValue;
+    }
+    void Hide()
+    {
+        m_state = State.HIDE;
+        IndicatorContainer.SetActive(false);
+        RealObstacle.SetActive(false);
+        m_timer = 0f;
+    }
     void Run()
     {
         m_timer = 0f;
         IndicatorContainer.SetActive(true);
-		m_state = State.SHOW_INDICATOR;
+        m_state = State.SHOW_INDICATOR;
         //Choose L or R
         m_IsRightToLeft = Time.frameCount % 2 == 0;
         LeftIndicator.SetActive(!m_IsRightToLeft);
         RightIndicator.SetActive(m_IsRightToLeft);
         RealObstacle.transform.localPosition = new Vector3(m_IsRightToLeft ? DefaultXPosition : -DefaultXPosition, 0f, 0f);
     }
+    void LateUpdate()
+    {
+        if (EventType.Type == EventTriggerType.TIME && m_state == State.HIDE)
+        {
+            m_TimeTriggerTimer += Time.deltaTime;
 
+            if (GameManager.Instance.SingleRunTime > EventType.StartValue)
+            {
+                if(m_TimeTriggerTimer > EventType.RepeatValue)
+                {
+                    m_TimeTriggerTimer = 0f;
+                    Run();
+                }
+            }
+
+        }
+    }
     // Update is called once per frame
     void OnMCChangedPosition(Vector3 MC_Position)
     {
@@ -81,8 +129,8 @@ public class SmartObstacle : MonoBehaviour
                 else
                 {
                     RealObstacle.SetActive(true);
-                    
-					m_state = State.FIRE;
+
+                    m_state = State.FIRE;
                 }
             }
         }
@@ -95,7 +143,7 @@ public class SmartObstacle : MonoBehaviour
         localPos.x += Speed * dt * (m_IsRightToLeft ? -1f : 1f);
         RealObstacle.transform.localPosition = localPos;
 
-        if(localPos.x > DefaultXPosition || localPos.x < -DefaultXPosition)
-			Reset();
+        if (localPos.x > DefaultXPosition || localPos.x < -DefaultXPosition)
+            Hide();
     }
 }

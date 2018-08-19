@@ -225,6 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b5ac51ecccb46d39c2570c7a9eab6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EventType:
+    Type: 1
+    StartValue: 10
+    RepeatValue: 5
   IndicatorContainer: {fileID: 1572106170335684}
   LeftIndicator: {fileID: 1434527483375944}
   RightIndicator: {fileID: 1986470807002638}
