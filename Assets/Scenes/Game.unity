@@ -559,6 +559,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd41bc5ecbe7b49d29273e6e34526ac2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1374233199
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1383102166
 Prefab:
   m_ObjectHideFlags: 0
@@ -955,8 +997,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e4856229e0b84c43a2ebe7cbde8e217, type: 2}
   - {fileID: 11400000, guid: 6e738b3bdf94c49bbb1189f468d8f9ac, type: 2}
   - {fileID: 11400000, guid: ea74c503954d82d43a14711efbc17f6e, type: 2}
-  - {fileID: 11400000, guid: d89666af46e114a4f81d2a3eec3df745, type: 2}
-  - {fileID: 11400000, guid: 662391cd2236e8444aabfff2461d0860, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1688233445
 Prefab:
   m_ObjectHideFlags: 0

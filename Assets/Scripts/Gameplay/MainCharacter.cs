@@ -55,8 +55,10 @@ public class MainCharacter : MonoBehaviour {
 	void Update () {
 		
 		if(IsState(State.RUNNING))
+		{
 			transform.position += m_direction * Speed * Time.deltaTime;
-
+			GameEvents.MC_CHANGED_POSITION.Raise(transform.position);
+		}
 	}
 	bool IsState(State state)
 	{
