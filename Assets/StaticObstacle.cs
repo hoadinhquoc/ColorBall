@@ -30,7 +30,6 @@ public class StaticObstacle : MonoBehaviour {
 	// Use this for initialization
 	void Awake()
 	{
-		GameEvents.RUN_STATIC_OBSTACLE += Run;
 		GameEvents.GAME_OVER += Reset;
 		GameEvents.SCORE_CHANGED += OnScoreChanged;
 		Reset();
@@ -70,6 +69,7 @@ public class StaticObstacle : MonoBehaviour {
 		BottomCollider.SetActive(false);
 		TopLaser.gameObject.SetActive(true);
 		BottomLaser.gameObject.SetActive(true);
+		GameEvents.RUN_STATIC_OBSTACLE.Raise();
 	}
 	// Update is called once per frame
 	void Update () {
