@@ -6,7 +6,9 @@ public class NodeSpawner : MonoBehaviour {
 	public static NodeSpawner Instance;
 	[SerializeField] Node nodePrefab;
 	[SerializeField] MinMaxFloat SpawnYRange;
+    [SerializeField] float DistanceWithMC = 1f;
 	[SerializeField] float timeToSpawn;
+    [SerializeField] Transform MainCharacter;
 	List<Node> childList;
 	int numberOfNode = 2;
 	
@@ -42,8 +44,12 @@ public class NodeSpawner : MonoBehaviour {
 		Node newNode = Instantiate(nodePrefab, this.transform).GetComponent<Node>();
 
 		Vector3 newPosition = newNode.transform.position;
-		newPosition.y = SpawnYRange.RandomValue;
-		newNode.transform.position = newPosition;
+        float MC_yPos = MainCharacter.position.y;
+        if (MC_yPos < 0)
+            newPosition.y = Random.Range(MC_yPos + DistanceWithMC, SpawnYRange.MaxValue);
+        else
+		    newPosition.y = Random.Range(SpawnYRange.MinValue, DistanceWithMC - MC_yPos);
+        newNode.transform.position = newPosition;
 
 		childList.Add(newNode);
 	}
