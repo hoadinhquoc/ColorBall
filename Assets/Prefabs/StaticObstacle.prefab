@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4157127859286238}
+  - component: {fileID: 95774535649625612}
   m_Layer: 0
   m_Name: BottomLaser
   m_TagString: Untagged
@@ -116,6 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4447003615539618}
+  - component: {fileID: 95696190284426882}
   m_Layer: 0
   m_Name: TopLaser
   m_TagString: Untagged
@@ -330,6 +332,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95696190284426882
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772791922881378}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d25dec1995d3a6346b41515f3d1bb7c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95774535649625612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1083873005468532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d25dec1995d3a6346b41515f3d1bb7c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114045447401666066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,9 +380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EventType:
-    Type: 1
-    StartValue: 5
-    RepeatValue: 10
+    Type: 0
+    StartValue: 10
+    RepeatValue: 3
   TopLaser: {fileID: 4447003615539618}
   TopCollider: {fileID: 1383997038707264}
   BottomLaser: {fileID: 4157127859286238}
@@ -390,7 +428,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 0.9339623, g: 0.5894156, b: 0.074893214, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -436,7 +474,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 0.9339623, g: 0.5894156, b: 0.074893214, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -482,7 +520,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9339623, g: 0.2775454, b: 0.2775454, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -528,7 +566,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9372549, g: 0.2784314, b: 0.2784314, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -574,7 +612,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 0.9339623, g: 0.5894156, b: 0.074893214, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -620,7 +658,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c5bb8394edf0482418bff6fabe9b9c02, type: 3}
-  m_Color: {r: 0.9339623, g: 0.5894156, b: 0.074893214, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

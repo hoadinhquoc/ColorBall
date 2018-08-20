@@ -70,7 +70,10 @@ public class StaticObstacle : MonoBehaviour {
 		TopLaser.gameObject.SetActive(true);
 		BottomLaser.gameObject.SetActive(true);
 		GameEvents.RUN_STATIC_OBSTACLE.Raise();
-	}
+
+        TopLaser.GetComponent<Animator>().SetTrigger("Prepare");
+        BottomLaser.GetComponent<Animator>().SetTrigger("Prepare");
+    }
 	// Update is called once per frame
 	void Update () {
 		float dt = Time.deltaTime;
@@ -110,7 +113,9 @@ public class StaticObstacle : MonoBehaviour {
 			{
 				TopCollider.SetActive(true);
 				BottomCollider.SetActive(true);
-				m_state = State.MOVING_IN;
+                TopLaser.GetComponent<Animator>().SetTrigger("Fire");
+                BottomLaser.GetComponent<Animator>().SetTrigger("Fire");
+                m_state = State.MOVING_IN;
 			}
 		}
 		else if(m_state == State.STAND)
