@@ -78,13 +78,15 @@ public class SmartObstacle : MonoBehaviour
     void Run()
     {
         m_timer = 0f;
-        IndicatorContainer.SetActive(true);
+        //IndicatorContainer.SetActive(true);
         m_state = State.SHOW_INDICATOR;
         //Choose L or R
         m_IsRightToLeft = Time.frameCount % 2 == 0;
         LeftIndicator.SetActive(!m_IsRightToLeft);
         RightIndicator.SetActive(m_IsRightToLeft);
         RealObstacle.transform.localPosition = new Vector3(m_IsRightToLeft ? DefaultXPosition : -DefaultXPosition, 0f, 0f);
+        RealObstacle.transform.localScale = Vector3.zero;
+        RealObstacle.SetActive(true);
     }
     void LateUpdate()
     {
@@ -119,6 +121,8 @@ public class SmartObstacle : MonoBehaviour
                 position.y = MC_Position.y;
 
                 transform.position = position;
+                float scaleValue = Mathf.Lerp(0f, 1f, m_timer / TimeToFireAfterIndicatorAppear);
+                RealObstacle.transform.localScale = new Vector3(scaleValue, scaleValue,1f);
             }
             else
             {
@@ -128,7 +132,8 @@ public class SmartObstacle : MonoBehaviour
                 }
                 else
                 {
-                    RealObstacle.SetActive(true);
+                    //RealObstacle.SetActive(true);
+                    RealObstacle.transform.localScale = Vector3.one;
 
                     m_state = State.FIRE;
                 }
