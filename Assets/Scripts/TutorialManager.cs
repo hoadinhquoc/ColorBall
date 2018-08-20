@@ -49,6 +49,8 @@ public class TutorialManager : MonoBehaviour {
 
     [SerializeField] GameObject TutorialHand;
     [SerializeField] float TimeToShowHand = 0.5f;
+    public static System.Action<string> SHOW_TUTORIAL_TEXT;
+    public static System.Action HIDE_TUTORIAL_TEXT;
     void Awake()
     {
         Instance = this;
@@ -116,12 +118,14 @@ public class TutorialManager : MonoBehaviour {
     {
         Time.timeScale = 0.2f;
         TutorialHand.SetActive(true);
+        SHOW_TUTORIAL_TEXT.Raise(string.Empty);
         GameEvents.MC_CHANGE_DIRECTION += HideTutotiralHitPlatform;
     }
     void HideTutotiralHitPlatform()
     {
         Time.timeScale = 1f;
         TutorialHand.SetActive(false);
+        HIDE_TUTORIAL_TEXT.Raise();
         SetFinishTutorial(TUTORIAL_STEP.HIT_FLATFORM);
         GameEvents.MC_CHANGE_DIRECTION -= HideTutotiralHitPlatform;
     }

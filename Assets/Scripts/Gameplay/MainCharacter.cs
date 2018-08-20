@@ -94,6 +94,7 @@ public class MainCharacter : MonoBehaviour {
 
         if (col.gameObject.CompareTag("Perfect"))
         {
+            Destroy(col.gameObject);
            
             GameEvents.INSCREASE_SCORE.Raise(2);
             

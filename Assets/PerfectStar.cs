@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PerfectStar : MonoBehaviour {
-    SpriteRenderer m_spriteRenderer;
+    [SerializeField]SpriteRenderer m_spriteRenderer;
 	// Use this for initialization
 	void Awake () {
         m_spriteRenderer = GetComponent<SpriteRenderer>();
@@ -14,6 +14,11 @@ public class PerfectStar : MonoBehaviour {
         GameEvents.MC_CHANGED_COLOR -= OnMCChangedColor;
     }
 	void OnMCChangedColor(Color color)
+    {
+        UpdateColor(color);
+    }
+
+    public void UpdateColor(Color color)
     {
         m_spriteRenderer.color = color;
     }

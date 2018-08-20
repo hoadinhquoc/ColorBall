@@ -8,6 +8,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] Obstacle obstaclePrefab;
     [SerializeField] MinMaxFloat SpawnYRange;
     [SerializeField] float timeToSpawn;
+    Color m_cacheColor = Color.blue;
     int numberOfObstacle = 0;
     List<Obstacle> childList;
     StageData stageData;
@@ -23,6 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
 
         GameEvents.RUN_STATIC_OBSTACLE += StopSpawn;
         GameEvents.END_STATIC_OBSTACLE += StartSpawn;
+        GameEvents.MC_CHANGED_COLOR += OnCharacterChangedColor;
     }
 
     // Update is called once per frame
@@ -65,7 +67,7 @@ public class ObstacleSpawner : MonoBehaviour
             Obstacle ob = Instantiate(obstaclePrefab.gameObject, transform).GetComponent<Obstacle>();
 
             childList.Add(ob);
-
+            ob.GetComponentInChildren<PerfectStar>().UpdateColor(m_cacheColor);
             ob.SetSpeed(stageData.ObstacleSpeed.RandomValue);
             ob.SetPositionY(SpawnYRange.RandomValue);
             ob.Run();
@@ -79,5 +81,10 @@ public class ObstacleSpawner : MonoBehaviour
     {
         childList.Remove(ob);
         Destroy(ob.gameObject);
+    }
+
+    void OnCharacterChangedColor(Color color)
+    {
+        m_cacheColor = color;
     }
 }
