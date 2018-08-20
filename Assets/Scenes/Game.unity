@@ -1142,6 +1142,27 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114470429392574220, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470429392574220, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470429392574220, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d4e9cceac70f46d47800fa8b983a0cc7,
+        type: 2}
+    - target: {fileID: 114470429392574220, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+        type: 2}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09c5ed0f2591d849b80bd5a9dbb3748, type: 2}
   m_IsPrefabAsset: 0
@@ -1333,6 +1354,15 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4946695833814292, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 102550803118032230, guid: 71610e2af99710b4484655805b00b0cc,
+        type: 2}
+      propertyPath: m_Color.rgba
+      value: 4285661018
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
   m_IsPrefabAsset: 0
@@ -1752,16 +1782,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114902676277858564, guid: c77d08e2b5fbf4253b71b37e206ee626,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1288933835}
     - target: {fileID: 114830632254331160, guid: c77d08e2b5fbf4253b71b37e206ee626,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1006714141}
+    - target: {fileID: 114902676277858564, guid: c77d08e2b5fbf4253b71b37e206ee626,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1288933835}
+    - target: {fileID: 114972220972588202, guid: c77d08e2b5fbf4253b71b37e206ee626,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114972220972588202, guid: c77d08e2b5fbf4253b71b37e206ee626,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77d08e2b5fbf4253b71b37e206ee626, type: 2}
   m_IsPrefabAsset: 0
