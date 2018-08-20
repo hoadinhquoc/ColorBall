@@ -48,7 +48,7 @@ public class TutorialManager : MonoBehaviour {
     bool[] TutorialsFinish;
 
     [SerializeField] GameObject TutorialHand;
-
+    [SerializeField] float TimeToShowHand = 0.5f;
     void Awake()
     {
         Instance = this;
@@ -107,7 +107,7 @@ public class TutorialManager : MonoBehaviour {
     {
         if(!IsFinishTutorial(TUTORIAL_STEP.HIT_FLATFORM))
         {
-            Invoke("ShowTutorialHitPlatform", 1f);
+            Invoke("ShowTutorialHitPlatform", TimeToShowHand);
         }
     }
 

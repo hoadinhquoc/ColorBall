@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TutorialHand: {fileID: 1145004927}
+  TimeToShowHand: 0.5
 --- !u!4 &1288933836
 Transform:
   m_ObjectHideFlags: 0
@@ -775,6 +776,11 @@ Prefab:
     - target: {fileID: 4398211018728004, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749617204170530, guid: b7167b0f3806c40a78c8c103da4b4ab9,
+        type: 2}
+      propertyPath: EventType.Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7167b0f3806c40a78c8c103da4b4ab9, type: 2}
