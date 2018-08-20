@@ -18,6 +18,7 @@ public class MainCharacter : MonoBehaviour {
 	[SerializeField] SpriteRenderer m_display;
 	[SerializeField] List<AudioClip> sfxList;
 	[SerializeField] AudioSource speaker;
+    [SerializeField] TrailRenderer ColorTrail;
 	GameSetting m_gameSetting;	
 	int m_colorIndex = 0;
 
@@ -118,9 +119,12 @@ public class MainCharacter : MonoBehaviour {
 	void ChangeColor(int colorIndex)
 	{
 		m_colorIndex = colorIndex;
-		m_display.color = m_gameSetting.GlobalColorList[colorIndex];
-        GameEvents.MC_CHANGED_COLOR.Raise(m_gameSetting.GlobalColorList[colorIndex]);
-
+        Color color = m_gameSetting.GlobalColorList[colorIndex];
+        m_display.color = color;
+        GameEvents.MC_CHANGED_COLOR.Raise(color);
+        ColorTrail.startColor = color;
+        color.a = 0f;
+        ColorTrail.endColor = color;
     }
 
 	void CollideWrongObject()

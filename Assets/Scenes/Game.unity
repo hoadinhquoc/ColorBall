@@ -272,6 +272,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114045447401666066, guid: 10b29da6d3e274913998900eeade2547,
+        type: 2}
+      propertyPath: EventType.Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114045447401666066, guid: 10b29da6d3e274913998900eeade2547,
+        type: 2}
+      propertyPath: EventType.StartValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114045447401666066, guid: 10b29da6d3e274913998900eeade2547,
+        type: 2}
+      propertyPath: EventType.RepeatValue
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10b29da6d3e274913998900eeade2547, type: 2}
   m_IsPrefabAsset: 0
@@ -1328,6 +1343,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 96683750362622568, guid: 71610e2af99710b4484655805b00b0cc,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
   m_IsPrefabAsset: 0

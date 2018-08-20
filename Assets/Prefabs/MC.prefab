@@ -480,6 +480,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   speaker: {fileID: 82192418525295478}
+  ColorTrail: {fileID: 96683750362622568}
 --- !u!114 &114780965136310356
 MonoBehaviour:
   m_ObjectHideFlags: 1
