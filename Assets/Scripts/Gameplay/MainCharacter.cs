@@ -123,7 +123,7 @@ public class MainCharacter : MonoBehaviour {
         m_display.color = color;
         GameEvents.MC_CHANGED_COLOR.Raise(color);
         ColorTrail.startColor = color;
-        color.a = 0f;
+        color.a = 0.2f;
         ColorTrail.endColor = color;
     }
 
