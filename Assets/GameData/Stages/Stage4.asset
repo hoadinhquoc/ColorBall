@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a28a60bb9234ea58fcc54fd2a64ed0, type: 3}
   m_Name: Stage4
   m_EditorClassIdentifier: 
-  PassingScore: 10
-  NumberOfColor: 4
-  NumberOfObstacle: 3
+  PassingScore: 20
+  NumberOfColor: 3
+  NumberOfObstacle: 1
   ObstacleSpeed:
-    MinValue: 6
-    MaxValue: 6
+    MinValue: 5
+    MaxValue: 5
   NumberOfNode: 1
