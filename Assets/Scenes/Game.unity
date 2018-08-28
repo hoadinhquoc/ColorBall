@@ -800,25 +800,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1318292996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1776394704324104, guid: 71610e2af99710b4484655805b00b0cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688233445}
---- !u!114 &1318292999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1318292996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceed9efa06346e34eadc859b4808b302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainRenderer: {fileID: 1858351748}
-  colorTrail: {fileID: 1858351746}
-  DeathVFX: {fileID: 1427131823}
 --- !u!1001 &1374233199
 Prefab:
   m_ObjectHideFlags: 0
@@ -977,11 +958,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1427131823 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198955377809789602, guid: 71610e2af99710b4484655805b00b0cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688233445}
 --- !u!1 &1470048311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,11 +1322,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 199781806578802306, guid: 71610e2af99710b4484655805b00b0cc,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71610e2af99710b4484655805b00b0cc, type: 2}
   m_IsPrefabAsset: 0
@@ -1610,16 +1581,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab10d8c097bc97943adeb21f970147d1, type: 2}
   m_IsPrefabAsset: 0
---- !u!96 &1858351746 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 96683750362622568, guid: 71610e2af99710b4484655805b00b0cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688233445}
---- !u!212 &1858351748 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 212151925586094752, guid: 71610e2af99710b4484655805b00b0cc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1688233445}
 --- !u!1 &1871233003 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1487556727173208, guid: c77d08e2b5fbf4253b71b37e206ee626,

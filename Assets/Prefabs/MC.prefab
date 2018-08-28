@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4359159165137374}
   - component: {fileID: 114728348494941310}
   - component: {fileID: 82192418525295478}
+  - component: {fileID: 114122146123137210}
   m_Layer: 0
   m_Name: MC
   m_TagString: MC
@@ -504,6 +505,20 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4285661018
+--- !u!114 &114122146123137210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776394704324104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceed9efa06346e34eadc859b4808b302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainRenderer: {fileID: 212151925586094752}
+  colorTrail: {fileID: 96683750362622568}
+  DeathVFX: {fileID: 198955377809789602}
 --- !u!114 &114385774025749756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -565,13 +580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 7
-  m_display: {fileID: 212151925586094752}
   sfxList:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   speaker: {fileID: 82192418525295478}
-  ColorTrail: {fileID: 96683750362622568}
 --- !u!114 &114780965136310356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5154,7 +5167,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
