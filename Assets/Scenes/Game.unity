@@ -287,7 +287,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1112,6 +1112,11 @@ Prefab:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224003994466091778, guid: e09c5ed0f2591d849b80bd5a9dbb3748,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09c5ed0f2591d849b80bd5a9dbb3748, type: 2}
   m_IsPrefabAsset: 0
@@ -1675,11 +1680,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4777488038953894, guid: ab10d8c097bc97943adeb21f970147d1, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114249324418325964, guid: ab10d8c097bc97943adeb21f970147d1,
-        type: 2}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
