@@ -112,7 +112,10 @@ public class TutorialManager : MonoBehaviour {
             Invoke("ShowTutorialHitPlatform", TimeToShowHand);
         }
     }
-
+    public bool IsInTutorial()
+    {
+        return m_currentTutorialStep != TUTORIAL_STEP.COUNT;
+    }
     //
     void ShowTutorialHitPlatform()
     {

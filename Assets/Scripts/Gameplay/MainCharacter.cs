@@ -15,10 +15,8 @@ public class MainCharacter : MonoBehaviour {
 		Count
 	}
 	[SerializeField] float Speed = 10f;
-	[SerializeField] SpriteRenderer m_display;
 	[SerializeField] List<AudioClip> sfxList;
 	[SerializeField] AudioSource speaker;
-    [SerializeField] TrailRenderer ColorTrail;
 	GameSetting m_gameSetting;	
 	int m_colorIndex = 0;
 
@@ -40,7 +38,6 @@ public class MainCharacter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		OnGameSettingUpdate();
-
 	}
 
 	void OnDirectionChange()
@@ -50,6 +47,7 @@ public class MainCharacter : MonoBehaviour {
 	void OnStartGame()
 	{
 		Reset();
+		GameEvents.MC_BORN.Raise();
 		m_state = State.RUNNING;
 	}
 	// Update is called once per frame
@@ -120,17 +118,20 @@ public class MainCharacter : MonoBehaviour {
 	{
 		m_colorIndex = colorIndex;
         Color color = m_gameSetting.GlobalColorList[colorIndex];
-        m_display.color = color;
         GameEvents.MC_CHANGED_COLOR.Raise(color);
-        ColorTrail.startColor = color;
-        color.a = 0.2f;
-        ColorTrail.endColor = color;
     }
 
 	void CollideWrongObject()
 	{
+		GameEvents.MC_DEATH.Raise();
 		m_state = State.IDLE;
+		Invoke("GameOver", 0.5f);
+	}
+
+	void GameOver()
+	{
 		GameEvents.GAME_OVER.Raise();
+		Reset();
 	}
 
 	void PlaySFX(AudioClip clip)

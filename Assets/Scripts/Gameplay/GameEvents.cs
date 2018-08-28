@@ -15,6 +15,8 @@ public class GameEvents {
     public static Action<Color> MC_CHANGED_COLOR;
     public static Action<Platform.Indentify> MC_COLLIDED_PLATFORM;
 	public static Action<Vector3> MC_CHANGED_POSITION;
+	public static Action MC_BORN;
+	public static Action MC_DEATH;
 
 	public static Action RUN_SMART_OBSTACLE;
 	public static Action RUN_STATIC_OBSTACLE;
