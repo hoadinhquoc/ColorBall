@@ -5,10 +5,14 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour {
 
 	MoveToPoint moveComponent;
+    PerfectStar perfectStar;
 	// Use this for initialization
 	void Awake () {
 		moveComponent = GetComponent<MoveToPoint>();
-		gameObject.SetActive(false);
+        perfectStar = GetComponentInChildren<PerfectStar>();
+
+        perfectStar.gameObject.SetActive(false);
+        gameObject.SetActive(false);
 	}
 	
 	void OnEnable()
@@ -36,7 +40,14 @@ public class Obstacle : MonoBehaviour {
 	{
 		moveComponent.Speed = speed;
 	}
-
+    public void UpdateStarColor(Color color)
+    {
+        perfectStar.UpdateColor(color);
+    }
+    public void ShowPerfectStar()
+    {
+        perfectStar.gameObject.SetActive(true);
+    }
 	public void Run()
 	{
 		if(Time.frameCount%2 == 0)
