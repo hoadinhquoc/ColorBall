@@ -945,6 +945,7 @@ MonoBehaviour:
     MinValue: -3
     MaxValue: 3
   timeToSpawn: 1.5
+  scoreToSpawnStar: 0
 --- !u!4 &1419209402
 Transform:
   m_ObjectHideFlags: 0

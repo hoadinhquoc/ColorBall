@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour {
 
-	MoveToPoint moveComponent;
-    PerfectStar perfectStar;
+    [SerializeField] PerfectStar LeftPerfect;
+    [SerializeField] PerfectStar RightPerfect;
+    MoveToPoint moveComponent;
+    bool m_needShowPerfect = false;
+    
 	// Use this for initialization
 	void Awake () {
 		moveComponent = GetComponent<MoveToPoint>();
-        perfectStar = GetComponentInChildren<PerfectStar>();
 
-        perfectStar.gameObject.SetActive(false);
+        LeftPerfect.gameObject.SetActive(false);
+        RightPerfect.gameObject.SetActive(false);
         gameObject.SetActive(false);
 	}
 	
@@ -42,11 +45,12 @@ public class Obstacle : MonoBehaviour {
 	}
     public void UpdateStarColor(Color color)
     {
-        perfectStar.UpdateColor(color);
+        LeftPerfect.UpdateColor(color);
+        RightPerfect.UpdateColor(color);
     }
     public void ShowPerfectStar()
     {
-        perfectStar.gameObject.SetActive(true);
+        m_needShowPerfect = true;
     }
 	public void Run()
 	{
@@ -56,7 +60,13 @@ public class Obstacle : MonoBehaviour {
 			moveComponent.StartPoint = moveComponent.EndPoint;
 			moveComponent.EndPoint = temp;
 		}
-		moveComponent.enabled = true;
+
+        if ((moveComponent.StartPoint.x - moveComponent.EndPoint.y) > 0) //right to left
+            RightPerfect.gameObject.SetActive(true);
+        else
+            LeftPerfect.gameObject.SetActive(true);
+
+        moveComponent.enabled = true;
 		moveComponent.SetEndCallback(()=>{ObstacleSpawner.Instance.OnChildRemoved(this);});
 		gameObject.SetActive(true);
 	}
