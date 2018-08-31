@@ -61,10 +61,13 @@ public class Obstacle : MonoBehaviour {
 			moveComponent.EndPoint = temp;
 		}
 
-        if ((moveComponent.StartPoint.x - moveComponent.EndPoint.y) > 0) //right to left
-            RightPerfect.gameObject.SetActive(true);
-        else
-            LeftPerfect.gameObject.SetActive(true);
+		if(m_needShowPerfect)
+		{
+			if ((moveComponent.StartPoint.x - moveComponent.EndPoint.y) > 0) //right to left
+				RightPerfect.gameObject.SetActive(true);
+			else
+				LeftPerfect.gameObject.SetActive(true);
+		}
 
         moveComponent.enabled = true;
 		moveComponent.SetEndCallback(()=>{ObstacleSpawner.Instance.OnChildRemoved(this);});
