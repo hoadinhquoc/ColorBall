@@ -119,7 +119,7 @@ public class TutorialManager : MonoBehaviour {
     //
     void ShowTutorialHitPlatform()
     {
-        Time.timeScale = 0.2f;
+        Time.timeScale = 0.07f;
         TutorialHand.SetActive(true);
         SHOW_TUTORIAL_TEXT.Raise(string.Empty);
         GameEvents.MC_CHANGE_DIRECTION += HideTutotiralHitPlatform;
